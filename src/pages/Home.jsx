@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Home({ darkMode }) {
   return (
     <main
-      className={`min-h-screen transition-colors duration-300 ${
+      className={`min-h-screen overflow-x-hidden transition-colors duration-300 ${
         darkMode
           ? "bg-[#050b20] text-white"
           : "bg-slate-50 text-slate-900"
@@ -15,7 +15,7 @@ function Home({ darkMode }) {
         <div className="grid w-full items-center gap-12 lg:grid-cols-2">
 
           {/* LEFT CONTENT */}
-          <div className="text-center lg:text-left">
+          <div className="min-w-0 text-center lg:text-left">
 
             {/* INTRODUCTION */}
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400 sm:text-base">
@@ -23,11 +23,21 @@ function Home({ darkMode }) {
             </p>
 
             {/* NAME */}
-            <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
-              Hi, I'm{" "}
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                Hemachandran
+            <h1 className="overflow-visible text-4xl font-extrabold leading-[1.15] sm:text-5xl lg:text-5xl xl:text-6xl">
+
+              <span
+                className={`block ${
+                  darkMode ? "text-white" : "text-slate-900"
+                }`}
+              >
+                Hi, I'm
               </span>
+
+              {/* FULL NAME */}
+              <span className="mt-3 inline-block whitespace-nowrap bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text pb-2 pr-4 text-transparent">
+                Hemachandran B R
+              </span>
+
             </h1>
 
             {/* ROLE */}
@@ -85,6 +95,7 @@ function Home({ darkMode }) {
               >
                 Download Resume
               </a>
+
             </div>
 
             {/* SOCIAL LINKS */}
@@ -113,6 +124,7 @@ function Home({ darkMode }) {
               >
                 LinkedIn ↗
               </a>
+
             </div>
           </div>
 
@@ -129,6 +141,7 @@ function Home({ darkMode }) {
                 alt="Hemachandran B R"
                 className="relative h-72 w-72 rounded-full border-4 border-cyan-400 bg-[#5b8fd5] object-contain shadow-2xl shadow-cyan-400/20 sm:h-96 sm:w-96"
               />
+
             </div>
           </div>
 

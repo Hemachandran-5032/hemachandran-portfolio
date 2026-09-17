@@ -28,33 +28,45 @@ function Navbar({ darkMode, setDarkMode }) {
             onClick={closeMenu}
             className="text-xl font-bold sm:text-2xl"
           >
-            <span className="text-cyan-400">Hemachandran</span>
-            <span
-              className={darkMode ? "text-white" : "text-slate-900"}
-            >
-              Dev
+            <span className="text-cyan-400">
+              Hemachandran B R
             </span>
           </Link>
 
           {/* DESKTOP NAVIGATION */}
           <div className="hidden items-center gap-6 md:flex">
-            <Link to="/" className="transition hover:text-cyan-400">
+            <Link
+              to="/"
+              className="transition hover:text-cyan-400"
+            >
               Home
             </Link>
 
-            <Link to="/about" className="transition hover:text-cyan-400">
+            <Link
+              to="/about"
+              className="transition hover:text-cyan-400"
+            >
               About
             </Link>
 
-            <Link to="/skills" className="transition hover:text-cyan-400">
+            <Link
+              to="/skills"
+              className="transition hover:text-cyan-400"
+            >
               Skills
             </Link>
 
-            <Link to="/projects" className="transition hover:text-cyan-400">
+            <Link
+              to="/projects"
+              className="transition hover:text-cyan-400"
+            >
               Projects
             </Link>
 
-            <Link to="/contact" className="transition hover:text-cyan-400">
+            <Link
+              to="/contact"
+              className="transition hover:text-cyan-400"
+            >
               Contact
             </Link>
           </div>
@@ -96,7 +108,9 @@ function Navbar({ darkMode, setDarkMode }) {
         {menuOpen && (
           <div
             className={`space-y-2 border-t py-4 md:hidden ${
-              darkMode ? "border-slate-800" : "border-slate-200"
+              darkMode
+                ? "border-slate-800"
+                : "border-slate-200"
             }`}
           >
             <Link
