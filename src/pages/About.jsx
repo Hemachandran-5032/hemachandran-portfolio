@@ -1,13 +1,11 @@
-
-import { Link } from "react-router-dom";
-
 function About({ darkMode }) {
   return (
     <section
-      className={`min-h-screen px-4 py-12 transition-colors duration-300 sm:px-6 sm:py-16 lg:px-10 ${
+      id="about"
+      className={`scroll-mt-24 min-h-screen px-4 py-12 transition-colors duration-300 sm:px-6 sm:py-16 lg:px-10 ${
         darkMode
-          ? "bg-[#050b20] text-white"
-          : "bg-slate-50 text-slate-900"
+          ? "bg-[#171A16] text-[#F3F4EF]"
+          : "bg-[#F7F7F3] text-[#1A1A18]"
       }`}
     >
       <div className="mx-auto max-w-7xl">
@@ -16,7 +14,7 @@ function About({ darkMode }) {
         <div className="mb-12 text-center sm:mb-16">
           <p
             className={`mb-3 text-xs font-semibold uppercase tracking-[0.2em] sm:text-sm sm:tracking-[0.3em] ${
-              darkMode ? "text-cyan-400" : "text-cyan-600"
+              darkMode ? "text-[#9AA88F]" : "text-[#7B8B73]"
             }`}
           >
             Get To Know Me
@@ -24,14 +22,20 @@ function About({ darkMode }) {
 
           <h1 className="text-3xl font-extrabold sm:text-4xl md:text-5xl">
             About{" "}
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+            <span
+              className={`bg-clip-text text-transparent ${
+                darkMode
+                  ? "bg-gradient-to-r from-[#9AA88F] to-[#C1C9B9]"
+                  : "bg-gradient-to-r from-[#6F8066] to-[#9AA88F]"
+              }`}
+            >
               Me
             </span>
           </h1>
 
           <p
             className={`mx-auto mt-4 max-w-2xl text-sm leading-7 sm:text-base ${
-              darkMode ? "text-slate-400" : "text-slate-600"
+              darkMode ? "text-[#AEB5A8]" : "text-[#62675E]"
             }`}
           >
             Discover my journey, interests, and passion for technology.
@@ -45,8 +49,8 @@ function About({ darkMode }) {
           <div
             className={`rounded-2xl border p-6 sm:p-8 ${
               darkMode
-                ? "border-slate-800 bg-[#0b1430]"
-                : "border-slate-200 bg-white shadow-lg"
+                ? "border-[#30362D] bg-[#22261F]"
+                : "border-[#D9DCD2] bg-white shadow-lg"
             }`}
           >
             <h2 className="text-2xl font-bold sm:text-3xl">
@@ -55,7 +59,7 @@ function About({ darkMode }) {
 
             <div
               className={`mt-5 space-y-4 text-sm leading-7 sm:text-base ${
-                darkMode ? "text-slate-300" : "text-slate-600"
+                darkMode ? "text-[#C1C7BC]" : "text-[#62675E]"
               }`}
             >
               <p>
@@ -83,27 +87,31 @@ function About({ darkMode }) {
           <div
             className={`rounded-2xl border p-6 sm:p-8 ${
               darkMode
-                ? "border-slate-800 bg-[#0b1430]"
-                : "border-slate-200 bg-white shadow-lg"
+                ? "border-[#30362D] bg-[#22261F]"
+                : "border-[#D9DCD2] bg-white shadow-lg"
             }`}
           >
             <h2 className="text-2xl font-bold sm:text-3xl">
               Education
             </h2>
 
-            <div className="relative mt-8 space-y-8 border-l-2 border-cyan-400 pl-6">
+            <div className="relative mt-8 space-y-8 border-l-2 border-[#7B8B73] pl-6">
 
               {/* B.TECH */}
               <div className="relative">
                 <span
                   className={`absolute -left-[33px] top-1 h-4 w-4 rounded-full border-4 ${
                     darkMode
-                      ? "border-cyan-400 bg-[#0b1430]"
-                      : "border-cyan-500 bg-white"
+                      ? "border-[#9AA88F] bg-[#22261F]"
+                      : "border-[#7B8B73] bg-white"
                   }`}
                 ></span>
 
-                <p className="text-sm font-semibold text-cyan-400">
+                <p
+                  className={`text-sm font-semibold ${
+                    darkMode ? "text-[#9AA88F]" : "text-[#7B8B73]"
+                  }`}
+                >
                   Current
                 </p>
 
@@ -113,7 +121,7 @@ function About({ darkMode }) {
 
                 <p
                   className={`mt-2 text-sm leading-7 sm:text-base ${
-                    darkMode ? "text-slate-400" : "text-slate-600"
+                    darkMode ? "text-[#AEB5A8]" : "text-[#62675E]"
                   }`}
                 >
                   Anna University Engineering College,
@@ -122,7 +130,7 @@ function About({ darkMode }) {
 
                 <p
                   className={`mt-2 text-sm ${
-                    darkMode ? "text-slate-500" : "text-slate-500"
+                    darkMode ? "text-[#858D80]" : "text-[#777C74]"
                   }`}
                 >
                   Undergraduate Student
@@ -134,12 +142,16 @@ function About({ darkMode }) {
                 <span
                   className={`absolute -left-[33px] top-1 h-4 w-4 rounded-full border-4 ${
                     darkMode
-                      ? "border-purple-400 bg-[#0b1430]"
-                      : "border-purple-500 bg-white"
+                      ? "border-[#9AA88F] bg-[#22261F]"
+                      : "border-[#7B8B73] bg-white"
                   }`}
                 ></span>
 
-                <p className="text-sm font-semibold text-purple-400">
+                <p
+                  className={`text-sm font-semibold ${
+                    darkMode ? "text-[#9AA88F]" : "text-[#7B8B73]"
+                  }`}
+                >
                   2023
                 </p>
 
@@ -149,7 +161,7 @@ function About({ darkMode }) {
 
                 <p
                   className={`mt-2 text-sm leading-7 sm:text-base ${
-                    darkMode ? "text-slate-400" : "text-slate-600"
+                    darkMode ? "text-[#AEB5A8]" : "text-[#62675E]"
                   }`}
                 >
                   Sri Ramana Maharishi Matriculation
@@ -158,7 +170,7 @@ function About({ darkMode }) {
 
                 <p
                   className={`mt-2 text-sm ${
-                    darkMode ? "text-slate-500" : "text-slate-500"
+                    darkMode ? "text-[#858D80]" : "text-[#777C74]"
                   }`}
                 >
                   Completed in 2023
@@ -172,8 +184,8 @@ function About({ darkMode }) {
           <div
             className={`rounded-2xl border p-6 sm:p-8 ${
               darkMode
-                ? "border-slate-800 bg-[#0b1430]"
-                : "border-slate-200 bg-white shadow-lg"
+                ? "border-[#30362D] bg-[#22261F]"
+                : "border-[#D9DCD2] bg-white shadow-lg"
             }`}
           >
             <h2 className="text-2xl font-bold sm:text-3xl">
@@ -193,8 +205,8 @@ function About({ darkMode }) {
                   key={interest}
                   className={`rounded-full px-4 py-2 text-xs font-medium sm:text-sm ${
                     darkMode
-                      ? "bg-slate-800 text-slate-300"
-                      : "bg-slate-100 text-slate-700"
+                      ? "bg-[#30362D] text-[#C1C7BC]"
+                      : "bg-[#EEF0E9] text-[#4F574A]"
                   }`}
                 >
                   {interest}
@@ -207,8 +219,8 @@ function About({ darkMode }) {
           <div
             className={`rounded-2xl border p-6 sm:p-8 ${
               darkMode
-                ? "border-slate-800 bg-[#0b1430]"
-                : "border-slate-200 bg-white shadow-lg"
+                ? "border-[#30362D] bg-[#22261F]"
+                : "border-[#D9DCD2] bg-white shadow-lg"
             }`}
           >
             <h2 className="text-2xl font-bold sm:text-3xl">
@@ -217,7 +229,7 @@ function About({ darkMode }) {
 
             <p
               className={`mt-5 text-sm leading-7 sm:text-base ${
-                darkMode ? "text-slate-300" : "text-slate-600"
+                darkMode ? "text-[#C1C7BC]" : "text-[#62675E]"
               }`}
             >
               I want to start my career in the software industry,
@@ -233,18 +245,22 @@ function About({ darkMode }) {
         <div className="mt-10 text-center sm:mt-14">
           <p
             className={`mb-5 text-sm sm:text-base ${
-              darkMode ? "text-slate-400" : "text-slate-600"
+              darkMode ? "text-[#AEB5A8]" : "text-[#62675E]"
             }`}
           >
             Interested in working together?
           </p>
 
-          <Link
-            to="/contact"
-            className="inline-block rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 px-7 py-3 text-sm font-bold text-white transition duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-400/30 sm:text-base"
+          <a
+            href="#contact"
+            className={`inline-block rounded-full px-7 py-3 text-sm font-bold text-white transition duration-300 hover:scale-105 hover:shadow-lg sm:text-base ${
+              darkMode
+                ? "bg-[#7B8B73] hover:bg-[#8B9A82] hover:shadow-[#9AA88F]/20"
+                : "bg-[#7B8B73] hover:bg-[#6F8066] hover:shadow-[#7B8B73]/20"
+            }`}
           >
             Let's Connect
-          </Link>
+          </a>
         </div>
 
       </div>

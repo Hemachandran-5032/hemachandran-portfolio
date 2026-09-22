@@ -1,13 +1,11 @@
-
-import { Link } from "react-router-dom";
-
 function Home({ darkMode }) {
   return (
     <main
+      id="home"
       className={`min-h-screen overflow-x-hidden transition-colors duration-300 ${
         darkMode
-          ? "bg-[#050b20] text-white"
-          : "bg-slate-50 text-slate-900"
+          ? "bg-[#171A16] text-[#F3F4EF]"
+          : "bg-[#F7F7F3] text-[#1A1A18]"
       }`}
     >
       {/* HERO SECTION */}
@@ -18,7 +16,11 @@ function Home({ darkMode }) {
           <div className="min-w-0 text-center lg:text-left">
 
             {/* INTRODUCTION */}
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400 sm:text-base">
+            <p
+              className={`mb-4 text-sm font-semibold uppercase tracking-[0.3em] sm:text-base ${
+                darkMode ? "text-[#9AA88F]" : "text-[#7B8B73]"
+              }`}
+            >
               Welcome to my portfolio
             </p>
 
@@ -27,14 +29,20 @@ function Home({ darkMode }) {
 
               <span
                 className={`block ${
-                  darkMode ? "text-white" : "text-slate-900"
+                  darkMode ? "text-[#F3F4EF]" : "text-[#1A1A18]"
                 }`}
               >
                 Hi, I'm
               </span>
 
               {/* FULL NAME */}
-              <span className="mt-3 inline-block whitespace-nowrap bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text pb-2 pr-4 text-transparent">
+              <span
+                className={`mt-3 inline-block whitespace-nowrap bg-clip-text pb-2 pr-4 text-transparent ${
+                  darkMode
+                    ? "bg-gradient-to-r from-[#9AA88F] to-[#C1C9B9]"
+                    : "bg-gradient-to-r from-[#6F8066] to-[#9AA88F]"
+                }`}
+              >
                 Hemachandran B R
               </span>
 
@@ -43,7 +51,7 @@ function Home({ darkMode }) {
             {/* ROLE */}
             <h2
               className={`mt-5 text-2xl font-bold sm:text-3xl ${
-                darkMode ? "text-slate-200" : "text-slate-700"
+                darkMode ? "text-[#D8DDD3]" : "text-[#454A42]"
               }`}
             >
               Full Stack Developer
@@ -52,7 +60,7 @@ function Home({ darkMode }) {
             {/* DESCRIPTION */}
             <p
               className={`mx-auto mt-6 max-w-xl text-base leading-8 sm:text-lg lg:mx-0 ${
-                darkMode ? "text-slate-300" : "text-slate-600"
+                darkMode ? "text-[#AEB5A8]" : "text-[#62675E]"
               }`}
             >
               I am a passionate Information Technology student interested in
@@ -64,24 +72,28 @@ function Home({ darkMode }) {
             <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
 
               {/* VIEW PROJECTS */}
-              <Link
-                to="/projects"
-                className="rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 px-7 py-3 font-bold text-white transition duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-400/30"
+              <a
+                href="#projects"
+                className={`rounded-full px-7 py-3 font-bold text-white transition duration-300 hover:scale-105 hover:shadow-lg ${
+                  darkMode
+                    ? "bg-[#7B8B73] hover:bg-[#8B9A82] hover:shadow-[#9AA88F]/20"
+                    : "bg-[#7B8B73] hover:bg-[#6F8066] hover:shadow-[#7B8B73]/20"
+                }`}
               >
                 View My Work
-              </Link>
+              </a>
 
               {/* CONTACT */}
-              <Link
-                to="/contact"
+              <a
+                href="#contact"
                 className={`rounded-full border px-7 py-3 font-bold transition duration-300 hover:scale-105 ${
                   darkMode
-                    ? "border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-[#050b20]"
-                    : "border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white"
+                    ? "border-[#9AA88F] text-[#9AA88F] hover:bg-[#9AA88F] hover:text-[#171A16]"
+                    : "border-[#7B8B73] text-[#6F8066] hover:bg-[#7B8B73] hover:text-white"
                 }`}
               >
                 Get In Touch
-              </Link>
+              </a>
 
               {/* DOWNLOAD RESUME */}
               <a
@@ -89,8 +101,8 @@ function Home({ darkMode }) {
                 download="Hemachandran-BR-Resume.pdf"
                 className={`rounded-full border px-7 py-3 font-bold transition duration-300 hover:scale-105 ${
                   darkMode
-                    ? "border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
-                    : "border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white"
+                    ? "border-[#AEB5A8] text-[#AEB5A8] hover:bg-[#AEB5A8] hover:text-[#171A16]"
+                    : "border-[#8A9184] text-[#62675E] hover:bg-[#8A9184] hover:text-white"
                 }`}
               >
                 Download Resume
@@ -106,8 +118,10 @@ function Home({ darkMode }) {
                 href="https://github.com/"
                 target="_blank"
                 rel="noreferrer"
-                className={`font-semibold transition hover:text-cyan-400 ${
-                  darkMode ? "text-slate-300" : "text-slate-600"
+                className={`font-semibold transition ${
+                  darkMode
+                    ? "text-[#AEB5A8] hover:text-[#9AA88F]"
+                    : "text-[#62675E] hover:text-[#7B8B73]"
                 }`}
               >
                 GitHub ↗
@@ -118,8 +132,10 @@ function Home({ darkMode }) {
                 href="https://www.linkedin.com/"
                 target="_blank"
                 rel="noreferrer"
-                className={`font-semibold transition hover:text-cyan-400 ${
-                  darkMode ? "text-slate-300" : "text-slate-600"
+                className={`font-semibold transition ${
+                  darkMode
+                    ? "text-[#AEB5A8] hover:text-[#9AA88F]"
+                    : "text-[#62675E] hover:text-[#7B8B73]"
                 }`}
               >
                 LinkedIn ↗
@@ -133,13 +149,23 @@ function Home({ darkMode }) {
             <div className="relative">
 
               {/* GLOW EFFECT */}
-              <div className="absolute -inset-5 rounded-full bg-gradient-to-r from-cyan-400 to-purple-600 opacity-30 blur-3xl"></div>
+              <div
+                className={`absolute -inset-5 rounded-full blur-3xl ${
+                  darkMode
+                    ? "bg-[#7B8B73] opacity-20"
+                    : "bg-[#9AA88F] opacity-25"
+                }`}
+              ></div>
 
               {/* PROFILE IMAGE */}
               <img
                 src="/hemu.jpeg"
                 alt="Hemachandran B R"
-                className="relative h-72 w-72 rounded-full border-4 border-cyan-400 bg-[#5b8fd5] object-contain shadow-2xl shadow-cyan-400/20 sm:h-96 sm:w-96"
+                className={`relative h-72 w-72 rounded-full border-4 object-contain shadow-2xl sm:h-96 sm:w-96 ${
+                  darkMode
+                    ? "border-[#9AA88F] bg-[#3A4135] shadow-[#9AA88F]/10"
+                    : "border-[#7B8B73] bg-[#E8E9E2] shadow-[#7B8B73]/10"
+                }`}
               />
 
             </div>

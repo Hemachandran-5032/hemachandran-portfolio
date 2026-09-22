@@ -1,5 +1,14 @@
-
 @import "tailwindcss";
 
 /* Enable class-based dark mode */
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* Smooth normal website scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}

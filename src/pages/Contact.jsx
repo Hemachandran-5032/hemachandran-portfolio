@@ -1,6 +1,4 @@
-
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 function Contact({ darkMode }) {
   const [formData, setFormData] = useState({
@@ -59,26 +57,41 @@ function Contact({ darkMode }) {
 
   return (
     <section
-      className={`min-h-screen px-6 py-24 transition-colors duration-300 ${
+      id="contact"
+      className={`scroll-mt-24 min-h-screen px-6 py-24 transition-colors duration-300 ${
         darkMode
-          ? "bg-[#050b20] text-white"
-          : "bg-slate-50 text-slate-900"
+          ? "bg-[#171A16] text-[#F3F4EF]"
+          : "bg-[#F7F7F3] text-[#1A1A18]"
       }`}
     >
       <div className="mx-auto max-w-6xl">
+
         {/* Page Heading */}
         <div className="mb-14 text-center">
-          <p className="mb-3 font-semibold uppercase tracking-[0.3em] text-cyan-400">
+          <p
+            className={`mb-3 font-semibold uppercase tracking-[0.3em] ${
+              darkMode ? "text-[#9AA88F]" : "text-[#7B8B73]"
+            }`}
+          >
             Get In Touch
           </p>
 
           <h1 className="text-4xl font-extrabold sm:text-5xl">
-            Contact <span className="text-cyan-400">Me</span>
+            Contact{" "}
+            <span
+              className={`bg-clip-text text-transparent ${
+                darkMode
+                  ? "bg-gradient-to-r from-[#9AA88F] to-[#C1C9B9]"
+                  : "bg-gradient-to-r from-[#6F8066] to-[#9AA88F]"
+              }`}
+            >
+              Me
+            </span>
           </h1>
 
           <p
             className={`mx-auto mt-5 max-w-2xl text-base leading-7 ${
-              darkMode ? "text-gray-300" : "text-gray-600"
+              darkMode ? "text-[#AEB5A8]" : "text-[#62675E]"
             }`}
           >
             Have a question, project idea, or opportunity? Feel free to
@@ -88,21 +101,29 @@ function Contact({ darkMode }) {
 
         {/* Contact Layout */}
         <div className="grid gap-10 lg:grid-cols-2">
+
           {/* Contact Information */}
           <div
             className={`rounded-3xl border p-8 shadow-xl ${
               darkMode
-                ? "border-white/10 bg-white/5"
-                : "border-slate-200 bg-white"
+                ? "border-[#30362D] bg-[#22261F]"
+                : "border-[#D9DCD2] bg-white"
             }`}
           >
             <h2 className="mb-6 text-2xl font-bold">
-              Let's <span className="text-cyan-400">Connect</span>
+              Let's{" "}
+              <span
+                className={
+                  darkMode ? "text-[#9AA88F]" : "text-[#7B8B73]"
+                }
+              >
+                Connect
+              </span>
             </h2>
 
             <p
               className={`mb-8 leading-7 ${
-                darkMode ? "text-gray-300" : "text-gray-600"
+                darkMode ? "text-[#AEB5A8]" : "text-[#62675E]"
               }`}
             >
               I am a final-year B.Tech Information Technology student
@@ -112,7 +133,13 @@ function Contact({ darkMode }) {
 
             {/* Email */}
             <div className="mb-6 flex items-start gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-400/10 text-xl">
+              <div
+                className={`flex h-12 w-12 items-center justify-center rounded-xl text-xl ${
+                  darkMode
+                    ? "bg-[#30362D] text-[#9AA88F]"
+                    : "bg-[#EEF0E9] text-[#6F8066]"
+                }`}
+              >
                 📧
               </div>
 
@@ -121,7 +148,11 @@ function Contact({ darkMode }) {
 
                 <a
                   href="mailto:hemachandranbalaji2105@gmail.com"
-                  className="break-all text-sm text-cyan-400 transition hover:text-purple-400"
+                  className={`break-all text-sm transition ${
+                    darkMode
+                      ? "text-[#9AA88F] hover:text-[#C1C9B9]"
+                      : "text-[#6F8066] hover:text-[#7B8B73]"
+                  }`}
                 >
                   hemachandranbalaji2105@gmail.com
                 </a>
@@ -130,7 +161,13 @@ function Contact({ darkMode }) {
 
             {/* Location */}
             <div className="mb-6 flex items-start gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-400/10 text-xl">
+              <div
+                className={`flex h-12 w-12 items-center justify-center rounded-xl text-xl ${
+                  darkMode
+                    ? "bg-[#30362D] text-[#9AA88F]"
+                    : "bg-[#EEF0E9] text-[#6F8066]"
+                }`}
+              >
                 📍
               </div>
 
@@ -139,7 +176,7 @@ function Contact({ darkMode }) {
 
                 <p
                   className={`text-sm ${
-                    darkMode ? "text-gray-300" : "text-gray-600"
+                    darkMode ? "text-[#AEB5A8]" : "text-[#62675E]"
                   }`}
                 >
                   Tamil Nadu, India
@@ -149,7 +186,13 @@ function Contact({ darkMode }) {
 
             {/* Education */}
             <div className="mb-8 flex items-start gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-400/10 text-xl">
+              <div
+                className={`flex h-12 w-12 items-center justify-center rounded-xl text-xl ${
+                  darkMode
+                    ? "bg-[#30362D] text-[#9AA88F]"
+                    : "bg-[#EEF0E9] text-[#6F8066]"
+                }`}
+              >
                 🎓
               </div>
 
@@ -158,7 +201,7 @@ function Contact({ darkMode }) {
 
                 <p
                   className={`text-sm ${
-                    darkMode ? "text-gray-300" : "text-gray-600"
+                    darkMode ? "text-[#AEB5A8]" : "text-[#62675E]"
                   }`}
                 >
                   B.Tech Information Technology
@@ -171,23 +214,33 @@ function Contact({ darkMode }) {
               <h3 className="mb-4 font-semibold">Follow Me</h3>
 
               <div className="flex flex-wrap gap-3">
+
                 <a
-                  href="https://github.com/"
+                  href="https://github.com/Hemachandran-5032"
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full border border-cyan-400 px-5 py-2 text-sm font-semibold text-cyan-400 transition hover:bg-cyan-400 hover:text-black"
+                  className={`rounded-full border px-5 py-2 text-sm font-semibold transition ${
+                    darkMode
+                      ? "border-[#9AA88F] text-[#9AA88F] hover:bg-[#9AA88F] hover:text-[#171A16]"
+                      : "border-[#7B8B73] text-[#6F8066] hover:bg-[#7B8B73] hover:text-white"
+                  }`}
                 >
                   GitHub
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/in/hemachandran0248/"
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full border border-purple-400 px-5 py-2 text-sm font-semibold text-purple-400 transition hover:bg-purple-400 hover:text-white"
+                  className={`rounded-full border px-5 py-2 text-sm font-semibold transition ${
+                    darkMode
+                      ? "border-[#9AA88F] text-[#9AA88F] hover:bg-[#9AA88F] hover:text-[#171A16]"
+                      : "border-[#7B8B73] text-[#6F8066] hover:bg-[#7B8B73] hover:text-white"
+                  }`}
                 >
                   LinkedIn
                 </a>
+
               </div>
             </div>
           </div>
@@ -196,15 +249,25 @@ function Contact({ darkMode }) {
           <div
             className={`rounded-3xl border p-8 shadow-xl ${
               darkMode
-                ? "border-white/10 bg-white/5"
-                : "border-slate-200 bg-white"
+                ? "border-[#30362D] bg-[#22261F]"
+                : "border-[#D9DCD2] bg-white"
             }`}
           >
             <h2 className="mb-6 text-2xl font-bold">
-              Send a <span className="text-purple-400">Message</span>
+              Send a{" "}
+              <span
+                className={`bg-clip-text text-transparent ${
+                  darkMode
+                    ? "bg-gradient-to-r from-[#9AA88F] to-[#C1C9B9]"
+                    : "bg-gradient-to-r from-[#6F8066] to-[#9AA88F]"
+                }`}
+              >
+                Message
+              </span>
             </h2>
 
             <form onSubmit={handleSubmit} className="space-y-5">
+
               {/* Name */}
               <div>
                 <label
@@ -222,10 +285,10 @@ function Contact({ darkMode }) {
                   onChange={handleChange}
                   placeholder="Enter your name"
                   required
-                  className={`w-full rounded-xl border px-4 py-3 outline-none transition focus:border-cyan-400 ${
+                  className={`w-full rounded-xl border px-4 py-3 outline-none transition ${
                     darkMode
-                      ? "border-white/10 bg-[#0b1535] text-white placeholder-gray-400"
-                      : "border-slate-200 bg-slate-50 text-slate-900 placeholder-gray-500"
+                      ? "border-[#3A4135] bg-[#171A16] text-[#F3F4EF] placeholder-[#70786C] focus:border-[#9AA88F]"
+                      : "border-[#D9DCD2] bg-[#F7F7F3] text-[#1A1A18] placeholder-[#8A9184] focus:border-[#7B8B73]"
                   }`}
                 />
               </div>
@@ -247,10 +310,10 @@ function Contact({ darkMode }) {
                   onChange={handleChange}
                   placeholder="Enter your email"
                   required
-                  className={`w-full rounded-xl border px-4 py-3 outline-none transition focus:border-cyan-400 ${
+                  className={`w-full rounded-xl border px-4 py-3 outline-none transition ${
                     darkMode
-                      ? "border-white/10 bg-[#0b1535] text-white placeholder-gray-400"
-                      : "border-slate-200 bg-slate-50 text-slate-900 placeholder-gray-500"
+                      ? "border-[#3A4135] bg-[#171A16] text-[#F3F4EF] placeholder-[#70786C] focus:border-[#9AA88F]"
+                      : "border-[#D9DCD2] bg-[#F7F7F3] text-[#1A1A18] placeholder-[#8A9184] focus:border-[#7B8B73]"
                   }`}
                 />
               </div>
@@ -271,10 +334,10 @@ function Contact({ darkMode }) {
                   value={formData.subject}
                   onChange={handleChange}
                   placeholder="Enter subject"
-                  className={`w-full rounded-xl border px-4 py-3 outline-none transition focus:border-cyan-400 ${
+                  className={`w-full rounded-xl border px-4 py-3 outline-none transition ${
                     darkMode
-                      ? "border-white/10 bg-[#0b1535] text-white placeholder-gray-400"
-                      : "border-slate-200 bg-slate-50 text-slate-900 placeholder-gray-500"
+                      ? "border-[#3A4135] bg-[#171A16] text-[#F3F4EF] placeholder-[#70786C] focus:border-[#9AA88F]"
+                      : "border-[#D9DCD2] bg-[#F7F7F3] text-[#1A1A18] placeholder-[#8A9184] focus:border-[#7B8B73]"
                   }`}
                 />
               </div>
@@ -296,10 +359,10 @@ function Contact({ darkMode }) {
                   placeholder="Write your message..."
                   rows="5"
                   required
-                  className={`w-full resize-none rounded-xl border px-4 py-3 outline-none transition focus:border-cyan-400 ${
+                  className={`w-full resize-none rounded-xl border px-4 py-3 outline-none transition ${
                     darkMode
-                      ? "border-white/10 bg-[#0b1535] text-white placeholder-gray-400"
-                      : "border-slate-200 bg-slate-50 text-slate-900 placeholder-gray-500"
+                      ? "border-[#3A4135] bg-[#171A16] text-[#F3F4EF] placeholder-[#70786C] focus:border-[#9AA88F]"
+                      : "border-[#D9DCD2] bg-[#F7F7F3] text-[#1A1A18] placeholder-[#8A9184] focus:border-[#7B8B73]"
                   }`}
                 ></textarea>
               </div>
@@ -308,19 +371,22 @@ function Contact({ darkMode }) {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full rounded-full bg-gradient-to-r from-cyan-400 to-purple-600 px-6 py-3 font-bold text-white transition duration-300 ${
+                className={`w-full rounded-full px-6 py-3 font-bold text-white transition duration-300 ${
                   isSubmitting
-                    ? "cursor-not-allowed opacity-60"
-                    : "hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-400/20"
+                    ? "cursor-not-allowed bg-[#8A9184] opacity-60"
+                    : darkMode
+                    ? "bg-[#7B8B73] hover:scale-[1.02] hover:bg-[#8B9A82] hover:shadow-lg hover:shadow-[#9AA88F]/20"
+                    : "bg-[#7B8B73] hover:scale-[1.02] hover:bg-[#6F8066] hover:shadow-lg hover:shadow-[#7B8B73]/20"
                 }`}
               >
                 {isSubmitting ? "Sending..." : "Send Message 🚀"}
               </button>
+
             </form>
 
             <p
               className={`mt-4 text-center text-xs ${
-                darkMode ? "text-gray-400" : "text-gray-500"
+                darkMode ? "text-[#858D80]" : "text-[#777C74]"
               }`}
             >
               Your message will be submitted securely through Formspree.
@@ -330,13 +396,18 @@ function Contact({ darkMode }) {
 
         {/* Back to Home */}
         <div className="mt-12 text-center">
-          <Link
-            to="/"
-            className="inline-block rounded-full border border-cyan-400 px-6 py-3 font-semibold text-cyan-400 transition hover:bg-cyan-400 hover:text-black"
+          <a
+            href="#home"
+            className={`inline-block rounded-full border px-6 py-3 font-semibold transition ${
+              darkMode
+                ? "border-[#9AA88F] text-[#9AA88F] hover:bg-[#9AA88F] hover:text-[#171A16]"
+                : "border-[#7B8B73] text-[#6F8066] hover:bg-[#7B8B73] hover:text-white"
+            }`}
           >
             ← Back to Home
-          </Link>
+          </a>
         </div>
+
       </div>
     </section>
   );

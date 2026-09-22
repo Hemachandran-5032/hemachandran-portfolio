@@ -1,6 +1,3 @@
-
-import { Link } from "react-router-dom";
-
 const projects = [
   {
     id: 1,
@@ -34,10 +31,11 @@ const projects = [
 function Projects({ darkMode }) {
   return (
     <section
-      className={`min-h-screen px-4 py-12 transition-colors duration-300 sm:px-6 sm:py-16 lg:px-10 ${
+      id="projects"
+      className={`scroll-mt-24 min-h-screen px-4 py-12 transition-colors duration-300 sm:px-6 sm:py-16 lg:px-10 ${
         darkMode
-          ? "bg-[#050b20] text-white"
-          : "bg-slate-50 text-slate-900"
+          ? "bg-[#171A16] text-[#F3F4EF]"
+          : "bg-[#F7F7F3] text-[#1A1A18]"
       }`}
     >
       <div className="mx-auto max-w-7xl">
@@ -46,7 +44,7 @@ function Projects({ darkMode }) {
         <div className="mb-12 text-center sm:mb-16">
           <p
             className={`mb-3 text-xs font-semibold uppercase tracking-[0.2em] sm:text-sm sm:tracking-[0.3em] ${
-              darkMode ? "text-cyan-400" : "text-cyan-600"
+              darkMode ? "text-[#9AA88F]" : "text-[#7B8B73]"
             }`}
           >
             My Work
@@ -54,14 +52,20 @@ function Projects({ darkMode }) {
 
           <h1 className="text-3xl font-extrabold sm:text-4xl md:text-5xl">
             My{" "}
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+            <span
+              className={`bg-clip-text text-transparent ${
+                darkMode
+                  ? "bg-gradient-to-r from-[#9AA88F] to-[#C1C9B9]"
+                  : "bg-gradient-to-r from-[#6F8066] to-[#9AA88F]"
+              }`}
+            >
               Projects
             </span>
           </h1>
 
           <p
             className={`mx-auto mt-4 max-w-2xl text-sm leading-7 sm:text-base ${
-              darkMode ? "text-slate-400" : "text-slate-600"
+              darkMode ? "text-[#AEB5A8]" : "text-[#62675E]"
             }`}
           >
             Explore my learning journey, project ideas, and
@@ -78,8 +82,8 @@ function Projects({ darkMode }) {
               key={project.id}
               className={`group flex flex-col overflow-hidden rounded-2xl border transition duration-300 hover:-translate-y-2 ${
                 darkMode
-                  ? "border-slate-800 bg-[#0b1430] hover:border-cyan-400/60"
-                  : "border-slate-200 bg-white shadow-lg hover:border-cyan-400"
+                  ? "border-[#30362D] bg-[#22261F] hover:border-[#9AA88F]/60"
+                  : "border-[#D9DCD2] bg-white shadow-lg hover:border-[#7B8B73]"
               }`}
             >
 
@@ -87,15 +91,15 @@ function Projects({ darkMode }) {
               <div
                 className={`relative flex h-44 items-center justify-center overflow-hidden ${
                   darkMode
-                    ? "bg-gradient-to-br from-cyan-400/10 to-purple-500/20"
-                    : "bg-gradient-to-br from-cyan-100 to-purple-100"
+                    ? "bg-gradient-to-br from-[#7B8B73]/10 to-[#9AA88F]/20"
+                    : "bg-gradient-to-br from-[#EEF0E9] to-[#E4E7DE]"
                 }`}
               >
                 <div
                   className={`flex h-20 w-20 items-center justify-center rounded-2xl border text-4xl font-bold transition duration-300 group-hover:scale-110 ${
                     darkMode
-                      ? "border-cyan-400/30 bg-slate-900/50 text-cyan-400"
-                      : "border-cyan-300 bg-white/70 text-cyan-600"
+                      ? "border-[#9AA88F]/30 bg-[#171A16]/50 text-[#9AA88F]"
+                      : "border-[#C8CDC0] bg-white/80 text-[#6F8066]"
                   }`}
                 >
                   {"</>"}
@@ -106,11 +110,11 @@ function Projects({ darkMode }) {
                   className={`absolute right-4 top-4 rounded-full px-3 py-1 text-xs font-semibold ${
                     project.status === "In Progress"
                       ? darkMode
-                        ? "bg-cyan-400/20 text-cyan-300"
-                        : "bg-cyan-100 text-cyan-700"
+                        ? "bg-[#9AA88F]/20 text-[#C1C9B9]"
+                        : "bg-[#E4E7DE] text-[#596550]"
                       : darkMode
-                      ? "bg-purple-400/20 text-purple-300"
-                      : "bg-purple-100 text-purple-700"
+                      ? "bg-[#30362D] text-[#AEB5A8]"
+                      : "bg-[#EEF0E9] text-[#62675E]"
                   }`}
                 >
                   {project.status}
@@ -122,7 +126,7 @@ function Projects({ darkMode }) {
 
                 <p
                   className={`text-xs font-semibold uppercase tracking-wider ${
-                    darkMode ? "text-cyan-400" : "text-cyan-600"
+                    darkMode ? "text-[#9AA88F]" : "text-[#7B8B73]"
                   }`}
                 >
                   {project.type}
@@ -134,7 +138,7 @@ function Projects({ darkMode }) {
 
                 <p
                   className={`mt-4 flex-1 text-sm leading-7 ${
-                    darkMode ? "text-slate-400" : "text-slate-600"
+                    darkMode ? "text-[#AEB5A8]" : "text-[#62675E]"
                   }`}
                 >
                   {project.description}
@@ -147,8 +151,8 @@ function Projects({ darkMode }) {
                       key={technology}
                       className={`rounded-full px-3 py-1.5 text-xs font-medium ${
                         darkMode
-                          ? "bg-slate-800 text-slate-300"
-                          : "bg-slate-100 text-slate-700"
+                          ? "bg-[#30362D] text-[#C1C7BC]"
+                          : "bg-[#EEF0E9] text-[#4F574A]"
                       }`}
                     >
                       {technology}
@@ -160,19 +164,23 @@ function Projects({ darkMode }) {
                 <div className="mt-7 flex flex-wrap gap-3">
 
                   {project.status === "In Progress" ? (
-                    <Link
-                      to="/"
-                      className="rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 px-5 py-2.5 text-sm font-bold text-white transition duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-400/20"
+                    <a
+                      href="#home"
+                      className={`rounded-full px-5 py-2.5 text-sm font-bold text-white transition duration-300 hover:scale-105 hover:shadow-lg ${
+                        darkMode
+                          ? "bg-[#7B8B73] hover:bg-[#8B9A82] hover:shadow-[#9AA88F]/20"
+                          : "bg-[#7B8B73] hover:bg-[#6F8066] hover:shadow-[#7B8B73]/20"
+                      }`}
                     >
                       View Portfolio
-                    </Link>
+                    </a>
                   ) : (
                     <button
                       disabled
                       className={`cursor-not-allowed rounded-full px-5 py-2.5 text-sm font-semibold ${
                         darkMode
-                          ? "bg-slate-800 text-slate-500"
-                          : "bg-slate-100 text-slate-400"
+                          ? "bg-[#30362D] text-[#70786C]"
+                          : "bg-[#EEF0E9] text-[#9AA094]"
                       }`}
                     >
                       Coming Soon
@@ -183,8 +191,8 @@ function Projects({ darkMode }) {
                     disabled
                     className={`rounded-full border px-5 py-2.5 text-sm font-semibold ${
                       darkMode
-                        ? "border-slate-700 text-slate-500"
-                        : "border-slate-200 text-slate-400"
+                        ? "border-[#3A4135] text-[#70786C]"
+                        : "border-[#D9DCD2] text-[#9AA094]"
                     }`}
                   >
                     GitHub
@@ -202,15 +210,15 @@ function Projects({ darkMode }) {
         <div
           className={`mt-10 rounded-2xl border p-6 text-center sm:mt-14 sm:p-10 ${
             darkMode
-              ? "border-slate-800 bg-[#0b1430]"
-              : "border-slate-200 bg-white shadow-lg"
+              ? "border-[#30362D] bg-[#22261F]"
+              : "border-[#D9DCD2] bg-white shadow-lg"
           }`}
         >
           <div
             className={`mx-auto flex h-14 w-14 items-center justify-center rounded-full text-2xl ${
               darkMode
-                ? "bg-cyan-400/10 text-cyan-400"
-                : "bg-cyan-100 text-cyan-600"
+                ? "bg-[#30362D] text-[#9AA88F]"
+                : "bg-[#EEF0E9] text-[#6F8066]"
             }`}
           >
             🚀
@@ -222,7 +230,7 @@ function Projects({ darkMode }) {
 
           <p
             className={`mx-auto mt-4 max-w-2xl text-sm leading-7 sm:text-base ${
-              darkMode ? "text-slate-400" : "text-slate-600"
+              darkMode ? "text-[#AEB5A8]" : "text-[#62675E]"
             }`}
           >
             I am currently improving my development skills and
@@ -230,12 +238,16 @@ function Projects({ darkMode }) {
             section will be updated as I complete new projects.
           </p>
 
-          <Link
-            to="/skills"
-            className="mt-7 inline-block rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 px-7 py-3 text-sm font-bold text-white transition duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-400/30 sm:text-base"
+          <a
+            href="#skills"
+            className={`mt-7 inline-block rounded-full px-7 py-3 text-sm font-bold text-white transition duration-300 hover:scale-105 hover:shadow-lg sm:text-base ${
+              darkMode
+                ? "bg-[#7B8B73] hover:bg-[#8B9A82] hover:shadow-[#9AA88F]/20"
+                : "bg-[#7B8B73] hover:bg-[#6F8066] hover:shadow-[#7B8B73]/20"
+            }`}
           >
             Explore My Skills
-          </Link>
+          </a>
         </div>
 
       </div>

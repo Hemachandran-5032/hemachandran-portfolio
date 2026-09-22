@@ -1,6 +1,4 @@
-
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 function Navbar({ darkMode, setDarkMode }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,74 +11,109 @@ function Navbar({ darkMode, setDarkMode }) {
     <nav
       className={`sticky top-0 z-50 border-b backdrop-blur-lg ${
         darkMode
-          ? "border-slate-800 bg-[#050b20]/90 text-white"
-          : "border-slate-200 bg-white/90 text-slate-900"
+          ? "border-[#30362D] bg-[#171A16]/90 text-[#F3F4EF]"
+          : "border-[#D9DCD2] bg-[#F7F7F3]/90 text-[#1A1A18]"
       }`}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-
-        {/* TOP NAVBAR */}
         <div className="flex items-center justify-between py-5">
 
           {/* LOGO */}
-          <Link
-            to="/"
+          <a
+            href="#home"
             onClick={closeMenu}
-            className="text-xl font-bold sm:text-2xl"
+            className="shrink-0 whitespace-nowrap text-xl font-bold sm:text-2xl"
           >
-            <span className="text-cyan-400">
+            <span
+              className={
+                darkMode ? "text-[#9AA88F]" : "text-[#7B8B73]"
+              }
+            >
               Hemachandran B R
             </span>
-          </Link>
+          </a>
 
-          {/* DESKTOP NAVIGATION */}
+          {/* DESKTOP MENU */}
           <div className="hidden items-center gap-6 md:flex">
-            <Link
-              to="/"
-              className="transition hover:text-cyan-400"
+
+            <a
+              href="#home"
+              className={`transition ${
+                darkMode
+                  ? "hover:text-[#9AA88F]"
+                  : "hover:text-[#7B8B73]"
+              }`}
             >
               Home
-            </Link>
+            </a>
 
-            <Link
-              to="/about"
-              className="transition hover:text-cyan-400"
+            <a
+              href="#about"
+              className={`transition ${
+                darkMode
+                  ? "hover:text-[#9AA88F]"
+                  : "hover:text-[#7B8B73]"
+              }`}
             >
               About
-            </Link>
+            </a>
 
-            <Link
-              to="/skills"
-              className="transition hover:text-cyan-400"
+            <a
+              href="#skills"
+              className={`transition ${
+                darkMode
+                  ? "hover:text-[#9AA88F]"
+                  : "hover:text-[#7B8B73]"
+              }`}
             >
               Skills
-            </Link>
+            </a>
 
-            <Link
-              to="/projects"
-              className="transition hover:text-cyan-400"
+            <a
+              href="#certificates"
+              className={`transition ${
+                darkMode
+                  ? "hover:text-[#9AA88F]"
+                  : "hover:text-[#7B8B73]"
+              }`}
+            >
+              Certificates
+            </a>
+
+            <a
+              href="#projects"
+              className={`transition ${
+                darkMode
+                  ? "hover:text-[#9AA88F]"
+                  : "hover:text-[#7B8B73]"
+              }`}
             >
               Projects
-            </Link>
+            </a>
 
-            <Link
-              to="/contact"
-              className="transition hover:text-cyan-400"
+            <a
+              href="#contact"
+              className={`transition ${
+                darkMode
+                  ? "hover:text-[#9AA88F]"
+                  : "hover:text-[#7B8B73]"
+              }`}
             >
               Contact
-            </Link>
+            </a>
+
           </div>
 
-          {/* RIGHT BUTTONS */}
+          {/* RIGHT SIDE */}
           <div className="flex items-center gap-3">
 
-            {/* THEME TOGGLE */}
+            {/* THEME BUTTON */}
             <button
               onClick={() => setDarkMode(!darkMode)}
               className={`rounded-full border px-4 py-2 text-lg transition ${
                 darkMode
-                  ? "border-slate-700 bg-slate-800 hover:border-cyan-400"
-                  : "border-slate-300 bg-slate-100 hover:border-cyan-400"
+                  ? "border-[#3A4135] bg-[#22261F] hover:border-[#9AA88F]"
+                  : "border-[#D9DCD2] bg-[#EEF0E9] hover:border-[#7B8B73]"
               }`}
               aria-label="Toggle light and dark theme"
             >
@@ -92,8 +125,8 @@ function Navbar({ darkMode, setDarkMode }) {
               onClick={() => setMenuOpen(!menuOpen)}
               className={`rounded-lg border px-3 py-2 text-xl md:hidden ${
                 darkMode
-                  ? "border-slate-700 bg-slate-800"
-                  : "border-slate-300 bg-slate-100"
+                  ? "border-[#3A4135] bg-[#22261F]"
+                  : "border-[#D9DCD2] bg-[#EEF0E9]"
               }`}
               aria-label="Toggle mobile menu"
               aria-expanded={menuOpen}
@@ -104,57 +137,90 @@ function Navbar({ darkMode, setDarkMode }) {
           </div>
         </div>
 
-        {/* MOBILE NAVIGATION */}
+        {/* MOBILE MENU */}
         {menuOpen && (
           <div
             className={`space-y-2 border-t py-4 md:hidden ${
               darkMode
-                ? "border-slate-800"
-                : "border-slate-200"
+                ? "border-[#30362D]"
+                : "border-[#D9DCD2]"
             }`}
           >
-            <Link
-              to="/"
+
+            <a
+              href="#home"
               onClick={closeMenu}
-              className="block rounded-lg px-4 py-3 transition hover:bg-cyan-400 hover:text-slate-900"
+              className={`block rounded-lg px-4 py-3 transition ${
+                darkMode
+                  ? "hover:bg-[#9AA88F] hover:text-[#171A16]"
+                  : "hover:bg-[#7B8B73] hover:text-white"
+              }`}
             >
               Home
-            </Link>
+            </a>
 
-            <Link
-              to="/about"
+            <a
+              href="#about"
               onClick={closeMenu}
-              className="block rounded-lg px-4 py-3 transition hover:bg-cyan-400 hover:text-slate-900"
+              className={`block rounded-lg px-4 py-3 transition ${
+                darkMode
+                  ? "hover:bg-[#9AA88F] hover:text-[#171A16]"
+                  : "hover:bg-[#7B8B73] hover:text-white"
+              }`}
             >
               About
-            </Link>
+            </a>
 
-            <Link
-              to="/skills"
+            <a
+              href="#skills"
               onClick={closeMenu}
-              className="block rounded-lg px-4 py-3 transition hover:bg-cyan-400 hover:text-slate-900"
+              className={`block rounded-lg px-4 py-3 transition ${
+                darkMode
+                  ? "hover:bg-[#9AA88F] hover:text-[#171A16]"
+                  : "hover:bg-[#7B8B73] hover:text-white"
+              }`}
             >
               Skills
-            </Link>
+            </a>
 
-            <Link
-              to="/projects"
+            <a
+              href="#certificates"
               onClick={closeMenu}
-              className="block rounded-lg px-4 py-3 transition hover:bg-cyan-400 hover:text-slate-900"
+              className={`block rounded-lg px-4 py-3 transition ${
+                darkMode
+                  ? "hover:bg-[#9AA88F] hover:text-[#171A16]"
+                  : "hover:bg-[#7B8B73] hover:text-white"
+              }`}
+            >
+              Certificates
+            </a>
+
+            <a
+              href="#projects"
+              onClick={closeMenu}
+              className={`block rounded-lg px-4 py-3 transition ${
+                darkMode
+                  ? "hover:bg-[#9AA88F] hover:text-[#171A16]"
+                  : "hover:bg-[#7B8B73] hover:text-white"
+              }`}
             >
               Projects
-            </Link>
+            </a>
 
-            <Link
-              to="/contact"
+            <a
+              href="#contact"
               onClick={closeMenu}
-              className="block rounded-lg px-4 py-3 transition hover:bg-cyan-400 hover:text-slate-900"
+              className={`block rounded-lg px-4 py-3 transition ${
+                darkMode
+                  ? "hover:bg-[#9AA88F] hover:text-[#171A16]"
+                  : "hover:bg-[#7B8B73] hover:text-white"
+              }`}
             >
               Contact
-            </Link>
+            </a>
+
           </div>
         )}
-
       </div>
     </nav>
   );
