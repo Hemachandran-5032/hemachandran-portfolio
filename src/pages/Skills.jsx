@@ -1,162 +1,192 @@
-const skills = [
-  {
-    title: "HTML",
-    description:
-      "Building structured and semantic web pages using modern HTML elements.",
-    icon: "</>",
-    color: "green",
-  },
-  {
-    title: "CSS",
-    description:
-      "Creating responsive layouts, styling interfaces, and improving user experience.",
-    icon: "🎨",
-    color: "green",
-  },
-  {
-    title: "JavaScript",
-    description:
-      "Using JavaScript to create interactive and dynamic web applications.",
-    icon: "JS",
-    color: "green",
-  },
-  {
-    title: "React.js",
-    description:
-      "Building reusable and responsive user interfaces using React.js.",
-    icon: "⚛",
-    color: "green",
-  },
-  {
-    title: "Node.js",
-    description:
-      "Learning server-side development and building backend applications with Node.js.",
-    icon: "JS",
-    color: "green",
-  },
-  {
-    title: "Express.js",
-    description:
-      "Working with Express.js to create backend services and REST APIs.",
-    icon: "EX",
-    color: "green",
-  },
-  {
-    title: "MongoDB",
-    description:
-      "Working with NoSQL databases to store and manage application data.",
-    icon: "DB",
-    color: "green",
-  },
-  {
-    title: "Java",
-    description:
-      "Developing programming fundamentals and solving problems using Java.",
-    icon: "☕",
-    color: "green",
-  },
-  {
-    title: "Python",
-    description:
-      "Using Python for programming, problem solving, and exploring modern technologies.",
-    icon: "PY",
-    color: "green",
-  },
-  {
-    title: "Git & GitHub",
-    description:
-      "Managing source code and collaborating on projects using Git and GitHub.",
-    icon: "GH",
-    color: "green",
-  },
-  {
-    title: "REST API",
-    description:
-      "Understanding API communication and connecting frontend applications with backend services.",
-    icon: "API",
-    color: "green",
-  },
-  {
-    title: "VS Code",
-    description:
-      "Using Visual Studio Code as my primary environment for development and project work.",
-    icon: "VS",
-    color: "green",
-  },
-];
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaReact,
+  FaNodeJs,
+  FaJava,
+  FaPython,
+  FaGithub,
+  FaServer,
+} from "react-icons/fa";
+
+import {
+  SiExpress,
+  SiMongodb,
+} from "react-icons/si";
 
 function Skills({ darkMode }) {
+  const skills = [
+    {
+      title: "HTML",
+      description:
+        "Building structured and semantic web pages using HTML.",
+      icon: <FaHtml5 />,
+    },
+
+    {
+      title: "CSS",
+      description:
+        "Creating responsive and visually appealing web designs using CSS.",
+      icon: <FaCss3Alt />,
+    },
+
+    {
+      title: "JavaScript",
+      description:
+        "Using JavaScript to create interactive and dynamic web applications.",
+      icon: <FaJsSquare />,
+    },
+
+    {
+      title: "React.js",
+      description:
+        "Building reusable and responsive user interfaces using React.js.",
+      icon: <FaReact />,
+    },
+
+    {
+      title: "Node.js",
+      description:
+        "Learning server-side development and building backend applications with Node.js.",
+      icon: <FaNodeJs />,
+    },
+
+    {
+      title: "Express.js",
+      description:
+        "Working with Express.js to create backend services and REST APIs.",
+      icon: <SiExpress />,
+    },
+
+    {
+      title: "MongoDB",
+      description:
+        "Working with NoSQL databases to store and manage application data.",
+      icon: <SiMongodb />,
+    },
+
+    {
+      title: "Java",
+      description:
+        "Developing programming fundamentals and solving problems using Java.",
+      icon: <FaJava />,
+    },
+
+    {
+      title: "Python",
+      description:
+        "Using Python for programming, problem solving, and exploring modern technologies.",
+      icon: <FaPython />,
+    },
+
+    {
+      title: "Git & GitHub",
+      description:
+        "Managing source code and collaborating on projects using Git and GitHub.",
+      icon: <FaGithub />,
+    },
+
+    {
+      title: "REST API",
+      description:
+        "Understanding API communication and connecting frontend applications with backend services.",
+      icon: <FaServer />,
+    },
+
+    {
+      title: "VS Code",
+      description:
+        "Using Visual Studio Code as my primary environment for development and project work.",
+      icon: (
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+          alt="VS Code"
+          className="h-12 w-12 object-contain grayscale brightness-150 opacity-80"
+        />
+      ),
+    },
+  ];
+
   return (
     <section
       id="skills"
-      className={`scroll-mt-24 min-h-screen px-4 py-14 transition-colors duration-300 sm:px-6 sm:py-20 lg:px-10 ${
+      className={`scroll-mt-24 min-h-screen px-4 py-16 transition-colors duration-300 sm:px-6 lg:px-10 ${
         darkMode
           ? "bg-[#171A16] text-[#F3F4EF]"
           : "bg-[#F7F7F3] text-[#1A1A18]"
       }`}
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-7xl">
 
-        {/* PAGE HEADER */}
-        <div className="mb-14 text-center sm:mb-16">
+        {/* Heading */}
+        <div className="mb-14 text-center">
+
           <p
-            className={`mb-3 text-xs font-semibold uppercase tracking-[0.25em] sm:text-sm ${
-              darkMode ? "text-[#9AA88F]" : "text-[#7B8B73]"
+            className={`mb-3 text-sm font-semibold uppercase tracking-[0.3em] ${
+              darkMode
+                ? "text-[#9AA88F]"
+                : "text-[#7B8B73]"
             }`}
           >
-            My Technical Abilities
+            What I Know
           </p>
 
-          <h1 className="text-3xl font-extrabold sm:text-4xl md:text-5xl">
+          <h2 className="text-4xl font-extrabold sm:text-5xl">
             My{" "}
             <span
-              className={`bg-clip-text text-transparent ${
+              className={`bg-gradient-to-r bg-clip-text text-transparent ${
                 darkMode
-                  ? "bg-gradient-to-r from-[#9AA88F] to-[#C1C9B9]"
-                  : "bg-gradient-to-r from-[#6F8066] to-[#9AA88F]"
+                  ? "from-[#9AA88F] to-[#C1C9B9]"
+                  : "from-[#6F8066] to-[#9AA88F]"
               }`}
             >
               Skills
             </span>
-          </h1>
+          </h2>
 
           <p
             className={`mx-auto mt-4 max-w-2xl text-sm leading-7 sm:text-base ${
-              darkMode ? "text-[#AEB5A8]" : "text-[#62675E]"
+              darkMode
+                ? "text-[#AEB5A8]"
+                : "text-[#62675E]"
             }`}
           >
-            Technologies and tools I use to build responsive websites
-            and modern applications.
+            Technologies and tools I am learning and using
+            to build modern applications.
           </p>
+
         </div>
 
-        {/* SKILLS GRID */}
-        <div className="grid grid-cols-1 gap-x-12 gap-y-12 sm:grid-cols-2 lg:gap-x-20 lg:gap-y-14">
+        {/* Skills Grid */}
+        <div className="grid grid-cols-1 gap-x-16 gap-y-12 md:grid-cols-2">
+
           {skills.map((skill) => (
             <div
               key={skill.title}
-              className="group flex items-start gap-5"
+              className="flex items-start gap-5"
             >
 
-              {/* ICON */}
+              {/* Icon Circle */}
               <div
-                className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-full border text-lg font-bold shadow-lg transition duration-300 group-hover:-translate-y-1 group-hover:scale-105 ${
+                className={`flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-full border text-4xl transition duration-300 hover:scale-110 ${
                   darkMode
-                    ? "border-[#4A5444] bg-[#22261F] text-[#9AA88F] shadow-[#9AA88F]/10"
-                    : "border-[#D9DCD2] bg-white text-[#6F8066] shadow-[#7B8B73]/10"
+                    ? "border-[#3A4135] bg-[#1D211C] text-[#AAB59F] shadow-lg shadow-[#9AA88F]/10"
+                    : "border-[#D9DCD2] bg-[#EEF0E9] text-[#7B8B73] shadow-lg"
                 }`}
               >
                 {skill.icon}
               </div>
 
-              {/* SKILL CONTENT */}
-              <div className="flex-1">
-                <h2 className="text-lg font-bold sm:text-xl">
+              {/* Skill Information */}
+              <div className="pt-1">
+
+                <h3 className="text-xl font-bold">
                   {skill.title}
-                </h2>
+                </h3>
 
                 <p
-                  className={`mt-2 text-sm leading-6 ${
+                  className={`mt-3 text-sm leading-7 ${
                     darkMode
                       ? "text-[#AEB5A8]"
                       : "text-[#62675E]"
@@ -164,50 +194,12 @@ function Skills({ darkMode }) {
                 >
                   {skill.description}
                 </p>
+
               </div>
+
             </div>
           ))}
-        </div>
 
-        {/* ADDITIONAL SKILLS */}
-        <div className="mt-16 text-center sm:mt-20">
-          <h2 className="text-2xl font-bold sm:text-3xl">
-            Additional Skills
-          </h2>
-
-          <div className="mt-6 flex flex-wrap justify-center gap-3">
-            {[
-              "Problem Solving",
-              "Teamwork",
-              "Communication",
-              "Logical Thinking",
-              "Time Management",
-              "Continuous Learning",
-            ].map((skill) => (
-              <span
-                key={skill}
-                className={`rounded-full border px-4 py-2 text-xs font-medium transition hover:-translate-y-1 sm:text-sm ${
-                  darkMode
-                    ? "border-[#3A4135] bg-[#22261F] text-[#C1C7BC] hover:border-[#9AA88F] hover:text-[#9AA88F]"
-                    : "border-[#D9DCD2] bg-white text-[#4F574A] shadow-sm hover:border-[#7B8B73] hover:text-[#6F8066]"
-                }`}
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* BOTTOM MESSAGE */}
-        <div className="mt-12 text-center sm:mt-16">
-          <p
-            className={`text-sm leading-7 sm:text-base ${
-              darkMode ? "text-[#AEB5A8]" : "text-[#62675E]"
-            }`}
-          >
-            I continuously improve my skills by working on projects,
-            exploring new technologies, and gaining practical experience.
-          </p>
         </div>
 
       </div>
